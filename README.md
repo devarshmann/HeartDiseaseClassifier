@@ -12,12 +12,8 @@ This project analyzes 253,680 health indicator samples to identify factors causi
 HeartDiseaseClassifier/
 ├── Analysis_Pipeline.ipynb               # Main analysis notebook (all parts)
 ├── EDA_Preprocessing.ipynb              # Initial exploratory data analysis
-├── REPORT.tex                           # Final 2-page LaTeX report
+├── Report.pdf                           # Final 2-page report
 ├── heart_disease_health_indicators_BRFSS2015.csv  # Dataset
-├── figures/                             # Generated visualization figures
-│   ├── confusion_matrix.png
-│   ├── roc_curve.png
-│   └── hyperparameter_comparison.png
 ├── cluster_analysis/                    # Part 1: Clustering module
 │   ├── __init__.py
 │   └── kmeans_analyzer.py
@@ -50,13 +46,7 @@ git clone <repository-url>
 cd HeartDiseaseClassifier
 ```
 
-2. Create a virtual environment (recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install required packages:
+2. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
@@ -131,25 +121,11 @@ classifier.print_evaluation()
 
 ### Generating Figures
 
-Figures are automatically generated when running the notebook cells. To save figures for the report:
+Figures are automatically generated when running the notebook cells. To save figures:
 
 1. Run the visualization cells in `Analysis_Pipeline.ipynb`
 2. Figures will be displayed in the notebook
-3. Right-click on figures and "Save Image As..." to save to `figures/` directory
-4. Required figures:
-   - `confusion_matrix.png`
-   - `roc_curve.png`
-   - `hyperparameter_comparison.png`
-
-### Compiling the Report
-
-1. Ensure all figures are in the `figures/` directory
-2. Compile the LaTeX report:
-```bash
-pdflatex REPORT.tex
-```
-
-Or use an online LaTeX compiler like Overleaf.
+3. Right-click on figures and "Save Image As..." to save them if needed
 
 ## Project Components
 
